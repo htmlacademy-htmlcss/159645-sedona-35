@@ -19,7 +19,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #000000;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .page-header {
@@ -31,11 +31,24 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
   line-height: 24px;
+  font-weight: 700;
   color: #000000;
   background-color: #ffffff;
-  font-weight: 700;
   text-align: center;
   text-decoration: none;
+}
+
+.navigation-link-want {
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #756157;
+  border: #756157 solid;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .main-index {
@@ -44,7 +57,6 @@ body {
 
 .hero {
   width: 1200px;
-  height: 485px;
   margin: 0 auto;
   background-image: url("../images/divider.svg"), url("../images/index-background.jpg");
   background-position: center bottom, center;
@@ -72,16 +84,15 @@ body {
 .town {
   text-align: center;
   color: #ffffff;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
   width: 400px;
-  height: 384px;
 }
 
 .town-title {
   font-size: 24px;
   line-height: 28px;
-  text-transform: uppercase;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .town-description {
@@ -122,16 +133,15 @@ body {
 .bridge {
   text-align: center;
   color: #ffffff;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
   width: 400px;
-  height: 384px;
 }
 
 .bridge-title {
   font-size: 24px;
   line-height: 28px;
-  text-transform: uppercase;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .bridge-description {
@@ -145,11 +155,11 @@ body {
 }
 
 .services-title {
-  color: #000000;
-  text-align: center;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
+  color: #000000;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -197,7 +207,7 @@ body {
   text-transform: uppercase;
 }
 
-.search-button {
+.button-brown {
   background-color: #756157;
   border: #756157 solid;
 }
@@ -222,9 +232,9 @@ body {
   line-height: 26px;
 }
 
-.subscription-button {
-  background-color: #82B3D3;
-  border: #82B3D3 solid;
+.button-blue {
+  background-color: #82b3d3;
+  border: #82b3d3 solid;
 }
 
 .page-footer {
