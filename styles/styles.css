@@ -14,7 +14,15 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -22,9 +30,42 @@ body {
   background-color: #f2f2f2;
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 .page-header {
+  width: 1200px;
+  margin: 0 auto;
   color: #000000;
   background-color: #ffffff;
+}
+
+.logo {
+  width: 140px;
+  margin-left: 70px;
+  margin-right: 44px;
+}
+
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  width: 450px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-user {
+  max-width: 310;
+  margin-left: auto;
 }
 
 .navigation-link {
@@ -51,8 +92,17 @@ body {
   text-transform: uppercase;
 }
 
+/* .main-container {
+  flex-grow: 1;
+} */
+
 .main-index {
   text-align: center;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .hero {
@@ -81,44 +131,31 @@ body {
   font-weight: 400;
 }
 
-.town {
-  text-align: center;
-  color: #ffffff;
-  background-color: #82b3d3;
-  width: 400px;
-}
-
-.town-title {
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.town-description {
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 400;
-}
-
 .advantages-list {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .advantages-title {
-  color: #000000;
-  text-align: center;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.advantages-description {
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 400;
-  color: #333333;
+.advantages-item-town,
+.advantages-item-bridge {
+  color: #ffffff;
+  background-color: #82b3d3;
+}
+
+.advantages-item-area,
+.advantages-item-road,
+.advantages-item-tourists {
+  color: #000000;
 }
 
 .advantages-item-area,
@@ -130,21 +167,7 @@ body {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.bridge {
-  text-align: center;
-  color: #ffffff;
-  background-color: #82b3d3;
-  width: 400px;
-}
-
-.bridge-title {
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.bridge-description {
+.advantages-description {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
@@ -152,6 +175,7 @@ body {
 
 .services-list {
   text-align: center;
+  display: flex;
 }
 
 .services-title {
@@ -181,6 +205,7 @@ body {
 
 .search {
   text-align: center;
+  background-color: #ffffff;
 }
 
 .search-title {
@@ -209,7 +234,7 @@ body {
 
 .button-brown {
   background-color: #756157;
-  border: #756157 solid;
+  border: 0;
 }
 
 .subscription {
@@ -234,11 +259,17 @@ body {
 
 .button-blue {
   background-color: #82b3d3;
-  border: #82b3d3 solid;
+  border: 0;
 }
 
 .page-footer {
   background-color: #ffffff;
+}
+
+.page-footer-container {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .footer-contact-phone {
