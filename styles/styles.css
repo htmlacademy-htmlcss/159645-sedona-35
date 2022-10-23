@@ -46,8 +46,7 @@ body {
 }
 
 .logo {
-  width: 140px;
-  margin-left: 70px;
+  margin-left: 71px;
   margin-right: 44px;
 }
 
@@ -61,11 +60,18 @@ body {
   width: 450px;
   margin: 0;
   padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navigation-item {
+  margin-right: 32px;
 }
 
 .navigation-user {
-  max-width: 310;
   margin-left: auto;
+  margin-right: 70px;
 }
 
 .navigation-link {
@@ -92,12 +98,9 @@ body {
   text-transform: uppercase;
 }
 
-/* .main-container {
-  flex-grow: 1;
-} */
-
 .main-index {
   text-align: center;
+  flex-grow: 1;
 }
 
 .page-container {
@@ -107,15 +110,28 @@ body {
 
 .hero {
   width: 1200px;
+  min-height: 485px;
   margin: 0 auto;
   background-image: url("../images/divider.svg"), url("../images/index-background.jpg");
   background-position: center bottom, center;
   background-repeat: no-repeat, no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome {
+  margin-bottom: 82px;
+  margin-left: 371px;
 }
 
 .information {
   text-align: center;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 282px;
 }
 
 .information-title {
@@ -123,12 +139,18 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  width: 620px;
+  min-height: 72px;
+  margin: 69px 290px 25px 290px;
 }
 
 .information-description {
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
+  width: 651px;
+  min-height: 26px;
+  margin: 0 274px 90px 275px;
 }
 
 .advantages-list {
@@ -137,9 +159,26 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.advantages-card {
+  box-sizing: border-box;
+  width: 400px;
+  min-height: 384px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 85px;
+}
+
+.advantages-item {
+  display: flex;
 }
 
 .advantages-title {
+  margin: 0;
+  margin-bottom: 62px;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
@@ -168,14 +207,32 @@ body {
 }
 
 .advantages-description {
+  margin: 0;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
 }
 
+.advantages-item-bridge .advantages-image {
+  order: -1;
+}
+
 .services-list {
   text-align: center;
   display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.services-item {
+  width: 400px;
+  min-height: 384px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 85px;
 }
 
 .services-title {
@@ -206,13 +263,21 @@ body {
 .search {
   text-align: center;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 406px;
 }
 
 .search-title {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
+  text-transform: uppercase;
   color: #000000;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .search-description {
@@ -220,6 +285,9 @@ body {
   line-height: 26px;
   font-weight: 400;
   color: #333333;
+  margin: 0;
+  margin-bottom: 62px;
+  width: 592px;
 }
 
 .button {
@@ -235,6 +303,7 @@ body {
 .button-brown {
   background-color: #756157;
   border: 0;
+  width: 376px;
 }
 
 .subscription {
@@ -243,6 +312,11 @@ body {
   background-repeat: no-repeat;
   color: #ffffff;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 415px;
 }
 
 .subscription-title {
@@ -250,11 +324,16 @@ body {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .subscription-description {
   font-size: 22px;
   line-height: 26px;
+  width: 475px;
+  margin: 0;
+  margin-bottom: 54px;
 }
 
 .button-blue {
@@ -264,12 +343,22 @@ body {
 
 .page-footer {
   background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
 }
 
-.page-footer-container {
-  display: flex;
-  width: 1200px;
-  margin: 0 auto;
+.footer-social {
+  min-width: 142px;
+  margin-right: 237px;
+}
+
+.footer-contact {
+  min-width: 331px;
+}
+
+.footer-logo {
+  min-width: 115px;
+  margin-left: 236px;
 }
 
 .footer-contact-phone {
