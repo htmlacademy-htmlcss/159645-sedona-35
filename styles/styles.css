@@ -14,7 +14,15 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -22,9 +30,48 @@ body {
   background-color: #f2f2f2;
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 .page-header {
+  width: 1200px;
+  margin: 0 auto;
   color: #000000;
   background-color: #ffffff;
+}
+
+.logo {
+  margin-left: 71px;
+  margin-right: 44px;
+}
+
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  width: 450px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navigation-item {
+  margin-right: 32px;
+}
+
+.navigation-user {
+  margin-left: auto;
+  margin-right: 70px;
 }
 
 .navigation-link {
@@ -53,19 +100,38 @@ body {
 
 .main-index {
   text-align: center;
+  flex-grow: 1;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .hero {
   width: 1200px;
+  min-height: 485px;
   margin: 0 auto;
   background-image: url("../images/divider.svg"), url("../images/index-background.jpg");
   background-position: center bottom, center;
   background-repeat: no-repeat, no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome {
+  margin-bottom: 82px;
+  margin-left: 371px;
 }
 
 .information {
   text-align: center;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 282px;
 }
 
 .information-title {
@@ -73,52 +139,62 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  width: 620px;
+  min-height: 72px;
+  margin: 69px 290px 25px 290px;
 }
 
 .information-description {
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
-}
-
-.town {
-  text-align: center;
-  color: #ffffff;
-  background-color: #82b3d3;
-  width: 400px;
-}
-
-.town-title {
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.town-description {
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 400;
+  width: 651px;
+  min-height: 26px;
+  margin: 0 274px 90px 275px;
 }
 
 .advantages-list {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.advantages-card {
+  box-sizing: border-box;
+  width: 400px;
+  min-height: 384px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 85px;
+}
+
+.advantages-item {
+  display: flex;
 }
 
 .advantages-title {
-  color: #000000;
-  text-align: center;
+  margin: 0;
+  margin-bottom: 62px;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.advantages-description {
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 400;
-  color: #333333;
+.advantages-item-town,
+.advantages-item-bridge {
+  color: #ffffff;
+  background-color: #82b3d3;
+}
+
+.advantages-item-area,
+.advantages-item-road,
+.advantages-item-tourists {
+  color: #000000;
 }
 
 .advantages-item-area,
@@ -130,28 +206,33 @@ body {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.bridge {
-  text-align: center;
-  color: #ffffff;
-  background-color: #82b3d3;
-  width: 400px;
-}
-
-.bridge-title {
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.bridge-description {
+.advantages-description {
+  margin: 0;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
 }
 
+.advantages-item-bridge .advantages-image {
+  order: -1;
+}
+
 .services-list {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.services-item {
+  width: 400px;
+  min-height: 384px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 85px;
 }
 
 .services-title {
@@ -181,13 +262,22 @@ body {
 
 .search {
   text-align: center;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 406px;
 }
 
 .search-title {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
+  text-transform: uppercase;
   color: #000000;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .search-description {
@@ -195,6 +285,9 @@ body {
   line-height: 26px;
   font-weight: 400;
   color: #333333;
+  margin: 0;
+  margin-bottom: 62px;
+  width: 592px;
 }
 
 .button {
@@ -209,7 +302,8 @@ body {
 
 .button-brown {
   background-color: #756157;
-  border: #756157 solid;
+  border: 0;
+  width: 376px;
 }
 
 .subscription {
@@ -218,6 +312,11 @@ body {
   background-repeat: no-repeat;
   color: #ffffff;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 415px;
 }
 
 .subscription-title {
@@ -225,20 +324,41 @@ body {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .subscription-description {
   font-size: 22px;
   line-height: 26px;
+  width: 475px;
+  margin: 0;
+  margin-bottom: 54px;
 }
 
 .button-blue {
   background-color: #82b3d3;
-  border: #82b3d3 solid;
+  border: 0;
 }
 
 .page-footer {
   background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-social {
+  min-width: 142px;
+  margin-right: 237px;
+}
+
+.footer-contact {
+  min-width: 331px;
+}
+
+.footer-logo {
+  min-width: 115px;
+  margin-left: 236px;
 }
 
 .footer-contact-phone {
