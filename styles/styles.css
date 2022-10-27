@@ -30,6 +30,17 @@ body {
   background-color: #f2f2f2;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -46,7 +57,7 @@ body {
 }
 
 .logo {
-  margin-left: 71px;
+  margin-left: 70px;
   margin-right: 44px;
 }
 
@@ -60,21 +71,20 @@ body {
   width: 450px;
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
   display: flex;
-  align-items: center;
-}
-
-.navigation-item {
-  margin-right: 32px;
+  flex-wrap: wrap;
 }
 
 .navigation-user {
+  width: 315px;
   margin-left: auto;
   margin-right: 70px;
 }
 
 .navigation-link {
+  padding: 20px 16px;
+  display: block;
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
   line-height: 24px;
@@ -92,10 +102,18 @@ body {
   font-weight: 700;
   color: #ffffff;
   background-color: #756157;
-  border: #756157 solid;
+  border: 0;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  display: block;
+  margin: 14px 20px;
+  padding: 8px 34px;
+}
+
+.navigation-item-icons {
+  min-width: 44px;
+  min-height: 64px;
 }
 
 .main-index {
@@ -121,8 +139,9 @@ body {
 }
 
 .welcome {
+  margin: 0 auto;
   margin-bottom: 82px;
-  margin-left: 371px;
+  margin-top: 51px;
 }
 
 .information {
@@ -263,11 +282,10 @@ body {
 .search {
   text-align: center;
   background-color: #ffffff;
+  min-height: 406px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  min-height: 406px;
 }
 
 .search-title {
@@ -276,7 +294,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   color: #000000;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 20px;
 }
 
@@ -285,7 +303,7 @@ body {
   line-height: 26px;
   font-weight: 400;
   color: #333333;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 62px;
   width: 592px;
 }
@@ -298,6 +316,8 @@ body {
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
+  padding: 8px 50px;
+  margin: 0 auto;
 }
 
 .button-brown {
@@ -315,7 +335,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   min-height: 415px;
 }
 
@@ -324,7 +343,7 @@ body {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 20px;
 }
 
@@ -332,7 +351,7 @@ body {
   font-size: 22px;
   line-height: 26px;
   width: 475px;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 54px;
 }
 
@@ -345,6 +364,7 @@ body {
   background-color: #ffffff;
   display: flex;
   justify-content: space-between;
+  padding: 45px 0;
 }
 
 .footer-social {
@@ -352,13 +372,27 @@ body {
   margin-right: 237px;
 }
 
+.footer-social-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.footer-social-item {
+  width: 48px;
+  height: 40px;
+}
+
 .footer-contact {
   min-width: 331px;
+  margin: 0 auto;
 }
 
 .footer-logo {
-  min-width: 115px;
-  margin-left: 236px;
+  margin-right: 70px;
 }
 
 .footer-contact-phone {
