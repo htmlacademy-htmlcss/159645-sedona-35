@@ -173,12 +173,11 @@ body {
 }
 
 .advantages-list {
-  text-align: center;
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
 }
 
 .advantages-card {
@@ -208,6 +207,7 @@ body {
 .advantages-item-bridge {
   color: #ffffff;
   background-color: #82b3d3;
+  grid-column: 1 / -1;
 }
 
 .advantages-item-area,
