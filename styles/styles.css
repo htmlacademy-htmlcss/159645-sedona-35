@@ -47,6 +47,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .page-header {
@@ -54,11 +55,15 @@ body {
   margin: 0 auto;
   color: #000000;
   background-color: #ffffff;
+  position: relative;
 }
 
 .logo {
   margin-left: 70px;
   margin-right: 44px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
 }
 
 .navigation {
@@ -76,6 +81,14 @@ body {
   flex-wrap: wrap;
 }
 
+.navigation-menu {
+  padding-left: 254px;
+}
+
+.navigation-user .navigation-link {
+  padding: 23px 13px;
+}
+
 .navigation-user {
   width: 315px;
   margin-left: auto;
@@ -90,9 +103,31 @@ body {
   line-height: 24px;
   font-weight: 700;
   color: #000000;
-  background-color: #ffffff;
   text-align: center;
   text-decoration: none;
+  position: relative;
+}
+
+.navigation-link:hover {
+  color: #83b3d3;
+}
+
+.navigation-link:focus-visible {
+  outline: 2px solid #82b3d3;
+}
+
+.navigation-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.navigation-link-current::before {
+  position: absolute;
+  right: 16px;
+  left: 16px;
+  bottom: -1px;
+  height: 2px;
+  background-color: #756257;
+  content: "";
 }
 
 .navigation-link-want {
@@ -109,11 +144,66 @@ body {
   display: block;
   margin: 14px 20px;
   padding: 8px 34px;
+  border-radius: 4px;
+}
+
+.navigation-link-want:hover {
+  background-color: #615048;
+}
+
+.navigation-link-want:focus {
+  outline: 2px solid #82b3d3;
+  background-color: #615048;
+}
+
+.navigation-link-want:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.navigation-item-icons a {
+  min-height: 64px;
+  box-sizing: border-box;
 }
 
 .navigation-item-icons {
   min-width: 44px;
   min-height: 64px;
+  position: relative;
+}
+
+.navigation-icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  margin: auto;
+}
+
+.navigation-icon:hover {
+  color: #83b3d3;
+}
+
+.navigation-icon:focus {
+  outline: 2px solid #82b3d3;
+}
+
+.navigation-icon:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.navigation-namber {
+  color: #ffffff;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  text-align: center;
+  background-color: #7db54f;
+  border-radius: 10px;
+  position: absolute;
+  top: 17px;
+  right: 3px;
 }
 
 .main-index {
@@ -201,6 +291,22 @@ body {
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
+  position: relative;
+}
+
+.advantages-card .advantages-title::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: -32px;
+  left: 50%;
+  margin-left: -30px;
+}
+
+.advantages-card-different .advantages-title::before {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .advantages-item-town,
@@ -254,6 +360,30 @@ body {
   padding: 0 85px;
 }
 
+.services-item-house .services-picture {
+  background-image: url("../images/advantage-home.svg");
+  background-position: center;
+  width: 75px;
+  height: 72px;
+  margin: 0 auto;
+}
+
+.services-item-food .services-picture {
+  background-image: url("../images/advantage-eat.svg");
+  background-position: center;
+  width: 74px;
+  height: 70px;
+  margin: 0 auto;
+}
+
+.services-item-souvenirs .services-picture {
+  background-image: url("../images/advantage-souvenirs.svg");
+  background-position: center;
+  min-width: 64px;
+  min-height: 76px;
+  margin: 0 auto;
+}
+
 .services-title {
   font-size: 24px;
   line-height: 28px;
@@ -261,6 +391,8 @@ body {
   color: #000000;
   text-align: center;
   text-transform: uppercase;
+  margin-top: 30px;
+  margin-bottom: 0;
 }
 
 .services-description {
@@ -268,15 +400,19 @@ body {
   line-height: 21px;
   font-weight: 400;
   color: #333333;
+  margin-top: 30px;
 }
 
-.services-item-house,
-.services-item-souvenirs {
+.services-item-house {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
 .services-item-food {
   background-color: #ffffff;
+}
+
+.services-item-souvenirs {
+  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .search {
@@ -318,12 +454,29 @@ body {
   text-transform: uppercase;
   padding: 8px 50px;
   margin: 0 auto;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 4px;
 }
 
 .button-brown {
   background-color: #756157;
-  border: none;
   width: 376px;
+}
+
+.button-brown:hover {
+  background-color: #615048;
+}
+
+.button-brown:focus {
+  outline: 2px solid #82b3d3;
+  background-color: #615048;
+}
+
+.button-brown:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .subscription {
@@ -357,7 +510,20 @@ body {
 
 .button-blue {
   background-color: #82b3d3;
-  border: none;
+}
+
+.button-blue:hover {
+  background-color: #68a2ca;
+}
+
+.button-blue:focus {
+  outline: 2px solid #82b3d3;
+  background-color: #68a2ca;
+}
+
+.button-blue:active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .page-footer {
@@ -369,6 +535,7 @@ body {
 
 .footer-social {
   width: 350px;
+  padding-left: 70px;
 }
 
 .footer-social-list {
@@ -376,27 +543,46 @@ body {
   padding: 0;
   list-style-type: none;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
 .footer-social-item {
   width: 48px;
   height: 40px;
+  position: relative;
+}
+
+.footer-social-item a {
+  width: 48px;
+  height: 40px;
+  display: block;
+}
+
+.footer-sociate-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  color: #83b3d3;
+}
+
+.footer-sociate-icon:hover {
+  color: #68a2ca;
+}
+
+.footer-sociate-icon:focus {
+  color: #68a2ca;
+}
+
+.footer-sociate-icon:active {
+  color: rgba(104, 162, 202, 0.3);
 }
 
 .footer-contact {
   min-width: 331px;
   margin: 0 auto;
-}
-
-.footer-logo {
-  width: 350px;
-  text-align: center;
-}
-
-.footer-logo a {
-  display: block;
 }
 
 .footer-contact-phone {
@@ -407,4 +593,40 @@ body {
   text-align: center;
   color: #000000;
   text-decoration: none;
+}
+
+.footer-contact-phone:hover {
+  color: #756157;
+}
+
+.footer-contact-phone:focus {
+  color: #756157;
+}
+
+.footer-contact-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.footer-logo {
+  width: 350px;
+  padding-right: 70px;
+}
+
+.footer-logo a {
+  display: block;
+  width: 115px;
+  margin-left: auto;
+  color: #000000;
+}
+
+.footer-logo a:hover {
+  color: #756157;
+}
+
+.footer-logo a:focus {
+  color: #756157;
+}
+
+.footer-logo a:active {
+  color: rgba(117, 97, 87, 0.3);
 }
