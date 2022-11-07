@@ -103,7 +103,6 @@ body {
   line-height: 24px;
   font-weight: 700;
   color: #000000;
-  background-color: #ffffff;
   text-align: center;
   text-decoration: none;
   position: relative;
@@ -161,10 +160,6 @@ body {
   background-color: #756157;
   color: rgba(255, 255, 255, 0.3);
 }
-
-/* .navigation-item a:not(:last-child) {
-  background: none;
-} */
 
 .navigation-item-icons a {
   min-height: 64px;
@@ -555,6 +550,12 @@ body {
   width: 48px;
   height: 40px;
   position: relative;
+}
+
+.footer-social-item a {
+  width: 48px;
+  height: 40px;
+  display: block;
 }
 
 .footer-sociate-icon {
