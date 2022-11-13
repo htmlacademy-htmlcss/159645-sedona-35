@@ -941,10 +941,10 @@ footer-sociate:active .footer-sociate-icon {
   width: 256px;
   box-sizing: border-box;
   position: absolute;
-  right: 137px;
-  top: 408px;
+  right: -115px;
+  top: 45px;
   z-index: 1;
-  /* display: none; */
+  display: none;
 }
 
 .tooltip-toggle:hover + .tooltip-text,
