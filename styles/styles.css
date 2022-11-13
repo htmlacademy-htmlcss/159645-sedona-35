@@ -751,13 +751,19 @@ footer-sociate:active .footer-sociate-icon {
   align-items: center;
 }
 
+.field-group-wrapper {
+  display: flex;
+  background-color: #f2f2f2;
+  width: 111px;
+  position: relative;
+}
+
 .form-adults {
   margin-right: 46px;
 }
 
 .form-children {
   margin-right: 82px;
-  position: relative;
 }
 
 .search-form-label {
@@ -780,7 +786,6 @@ footer-sociate:active .footer-sociate-icon {
 
 .field-data {
   width: 400px;
-  position: relative;
 }
 
 .field-data-arrival {
@@ -794,10 +799,21 @@ footer-sociate:active .footer-sociate-icon {
 .field-amount {
   width: 31px;
   height: 48px;
-  padding: 14px 10px;
-  margin-left: 46px;
-  margin: 0;
+  padding: 14px 0;
+  margin: 0 3px;
   box-sizing: border-box;
+  text-align: center;
+}
+
+.field-amount::-webkit-outer-spin-button,
+.field-amount::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.field-amount[type='number'] {
+  -moz-appearance: textfield;
 }
 
 .button-minus,
@@ -805,7 +821,6 @@ footer-sociate:active .footer-sociate-icon {
   width: 40px;
   height: 48px;
   border: none;
-  background-color: #f2f2f2;
   padding: 0;
   cursor: pointer;
 }
@@ -815,8 +830,8 @@ footer-sociate:active .footer-sociate-icon {
   background-color: rgba(230, 230, 230, 1);
 }
 
-.button-minus:focus,
-.button-plus:focus {
+.button-minus:focus-visible,
+.button-plus:focus-visible {
   outline: 3px solid #83b3d3;
 }
 
@@ -885,6 +900,9 @@ footer-sociate:active .footer-sociate-icon {
 .tooltip {
   width: 26px;
   height: 26px;
+  position: absolute;
+  top: 12px;
+  left: -72px;
 }
 
 .tooltip-toggle {
@@ -893,15 +911,17 @@ footer-sociate:active .footer-sociate-icon {
   padding: 0;
   margin: 0;
   display: block;
-  position: relative;
+  cursor: pointer;
+}
+
+.tooltip-toggle:hover,
+.tooltip-toggle:focus-visible {
+  opacity: 0.5;
 }
 
 .tooltip-icon {
   border-radius: 50%;
   display: block;
-  position: absolute;
-  right: 46px;
-  top: -1px;
   color: #ffffff;
   background-color: #83b3d3;
   width: 2px;
@@ -924,8 +944,12 @@ footer-sociate:active .footer-sociate-icon {
   right: 137px;
   top: 408px;
   z-index: 1;
-  visibility: hidden;
-  opacity: 0;
+  /* display: none; */
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus-visible + .tooltip-text {
+  display: block;
 }
 
 .tooltip-text::before {
