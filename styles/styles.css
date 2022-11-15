@@ -28,6 +28,7 @@ body {
   line-height: 21px;
   color: #000000;
   background-color: #f2f2f2;
+  min-width: 1280px;
 }
 
 .visually-hidden {
@@ -90,9 +91,9 @@ body {
 }
 
 .navigation-user {
-  width: 315px;
+  width: 268px;
   margin-left: auto;
-  margin-right: 70px;
+  padding-right: 70px;
 }
 
 .navigation-link {
@@ -106,6 +107,10 @@ body {
   text-align: center;
   text-decoration: none;
   position: relative;
+}
+
+.navigation-link-current {
+  padding-left: 0;
 }
 
 .navigation-link:hover {
@@ -123,7 +128,7 @@ body {
 .navigation-link-current::before {
   position: absolute;
   right: 16px;
-  left: 16px;
+  left: -1px;
   bottom: -1px;
   height: 2px;
   background-color: #756257;
@@ -142,7 +147,8 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   display: block;
-  margin: 14px 20px;
+  margin: 14px 0;
+  margin-left: 20px;
   padding: 8px 34px;
   border-radius: 4px;
 }
@@ -202,7 +208,7 @@ body {
   background-color: #7db54f;
   border-radius: 10px;
   position: absolute;
-  top: 17px;
+  top: 11px;
   right: 3px;
 }
 
@@ -277,7 +283,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 85px;
+  padding: 102px 85px 121px 85px;
 }
 
 .advantages-item {
@@ -305,7 +311,11 @@ body {
   margin-left: -30px;
 }
 
-.advantages-card-different .advantages-title::before {
+.advantages-card-foto {
+  padding: 92px 85px 111px 85px;
+}
+
+.advantages-card-foto .advantages-title::before {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -345,6 +355,7 @@ body {
 .services-list {
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   list-style-type: none;
   margin: 0;
@@ -355,33 +366,35 @@ body {
   width: 400px;
   min-height: 384px;
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
   justify-content: center;
-  padding: 0 85px;
+}
+
+.services-picture {
+  margin: 0 auto;
+  padding-top: 80px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .services-item-house .services-picture {
   background-image: url("../images/advantage-home.svg");
-  background-position: center;
   width: 75px;
   height: 72px;
-  margin: 0 auto;
 }
 
 .services-item-food .services-picture {
   background-image: url("../images/advantage-eat.svg");
-  background-position: center;
   width: 74px;
   height: 70px;
-  margin: 0 auto;
 }
 
 .services-item-souvenirs .services-picture {
   background-image: url("../images/advantage-souvenirs.svg");
-  background-position: center;
   min-width: 64px;
   min-height: 76px;
-  margin: 0 auto;
 }
 
 .services-title {
@@ -401,6 +414,7 @@ body {
   font-weight: 400;
   color: #333333;
   margin-top: 30px;
+  padding: 0 85px;
 }
 
 .services-item-house {
@@ -422,6 +436,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 96px 0;
+  box-sizing: border-box;
 }
 
 .search-title {
@@ -440,7 +456,7 @@ body {
   font-weight: 400;
   color: #333333;
   margin: 0 auto;
-  margin-bottom: 62px;
+  margin-bottom: 54px;
   width: 592px;
 }
 
@@ -552,6 +568,7 @@ body {
   justify-content: center;
   width: 684px;
   margin: 0 auto;
+  margin-bottom: 5px;
 }
 
 .button-blue {
@@ -576,6 +593,7 @@ body {
 .page-footer {
   background-color: #ffffff;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 45px 0;
 }
@@ -628,7 +646,7 @@ footer-sociate:active .footer-sociate-icon {
 }
 
 .footer-contact {
-  min-width: 331px;
+  width: 340px;
   margin: 0 auto;
 }
 
@@ -648,6 +666,7 @@ footer-sociate:active .footer-sociate-icon {
 
 .footer-contact-phone:focus {
   color: #756157;
+  outline: 2px solid #82b3d3;
 }
 
 .footer-contact-phone:active {
@@ -672,6 +691,7 @@ footer-sociate:active .footer-sociate-icon {
 
 .footer-logo a:focus {
   color: #756157;
+  outline: 2px solid #82b3d3;
 }
 
 .footer-logo a:active {
@@ -688,9 +708,9 @@ footer-sociate:active .footer-sociate-icon {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
-/* .modal-container-close {
+.modal-container-close {
   display: none;
-} */
+}
 
 .modal-search {
   width: 717px;
@@ -973,7 +993,8 @@ footer-sociate:active .footer-sociate-icon {
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
-  padding: 18px 256px;
+  padding: 18px 20px;
+  width: 100%;
   border: none;
   cursor: pointer;
 }
