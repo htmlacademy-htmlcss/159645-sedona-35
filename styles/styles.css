@@ -541,7 +541,6 @@ body {
 
 .field:focus {
   background-color: #e6e6e6;
-  border: 3px solid #83b3d3;
   outline: 3px solid #82b3d3;
 }
 
@@ -593,7 +592,6 @@ body {
 .page-footer {
   background-color: #ffffff;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   padding: 45px 0;
 }
@@ -637,17 +635,18 @@ body {
   color: #68a2ca;
 }
 
-footer-sociate:focus .footer-sociate-icon {
+.footer-sociate:focus .footer-sociate-icon {
   color: #68a2ca;
+  outline: 2px solid #82b3d3;
 }
 
-footer-sociate:active .footer-sociate-icon {
+.footer-sociate:active .footer-sociate-icon {
   color: rgba(104, 162, 202, 0.3);
 }
 
 .footer-contact {
   width: 340px;
-  margin: 0 auto;
+  margin-left: 30px;
 }
 
 .footer-contact-phone {
