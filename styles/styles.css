@@ -635,9 +635,8 @@ body {
   color: #68a2ca;
 }
 
-.footer-sociate:focus .footer-sociate-icon {
+.footer-sociate:focus-visible .footer-sociate-icon {
   color: #68a2ca;
-  outline: 2px solid #82b3d3;
 }
 
 .footer-sociate:active .footer-sociate-icon {
